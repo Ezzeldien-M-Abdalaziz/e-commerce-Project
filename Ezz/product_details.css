@@ -1,0 +1,498 @@
+/* 
+body {
+    font-family:  Montserrat-Bold;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.product-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-header {
+    text-align: center;
+}
+
+.product-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category,
+.price,
+.rating,
+.availability,
+.shipping,
+.warranty,
+.return-policy,
+.sku,
+.weight,
+.dimensions {
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #e67e22;
+}
+
+.price .discount {
+    color: #c0392b;
+    font-size: 16px;
+}
+
+.rating {
+    font-size: 18px;
+    color: #27ae60;
+}
+
+.low-stock {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.details-container {
+    padding: 10px;
+}
+
+.details-container p {
+    margin: 5px 0;
+}
+
+.reviews-section {
+    margin-top: 30px;
+}
+
+.reviews-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.review p {
+    margin: 5px 0;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+    --main: #333;
+    --darker-main: #222;
+    --ligher-main: #555;
+  }
+
+  a,
+  li {
+    text-decoration: none;
+    list-style: none;
+    color: #ddd;
+  }
+
+  header {
+    height: 80px;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header ul {
+    display: flex;
+    gap: 1rem;
+  }
+  header ul li a {
+    color: var(--main);
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: normal;
+    text-transform: capitalize;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  header ul li a:hover {
+      color: orangered;
+  }
+  
+  header ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust as needed */
+    width: 100%;
+    height: 1px;
+    background-color: var(--main);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom right;
+  }
+  
+  header ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  header .search-bar {
+    position: relative;
+  }
+  
+  header .search-bar input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    outline: none;
+    padding: 1rem;
+    border-radius: 30px;
+  }
+  
+  header .search-bar i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  header .profile-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #ddd;
+    font-size: 1.7rem;
+  }
+  
+  header .profile-shop span {
+    height: 20px;
+    width: 2px;
+    border-radius: 10px;
+    background-color: #ddd;
+  }
+  
+  header .profile-shop .cart {
+      position: relative;
+  }
+  
+  header .profile-shop .cart span {
+      position: absolute;
+      background: #000;
+      font-size: 12px;
+      font-weight: 600;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      top: 0;
+      right: -10px;
+  }
+  
+  header i:hover {
+      color: var(--main);
+  }
+
+body{
+    font-family: Montserrat;
+}
+
+/* Main Section Styles */
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+}
+
+
+.add{
+    position: absolute;
+    bottom: 50px;
+    left: 13%;
+    button{
+      padding: 15px 60px;
+      background-color: #2b4cd7;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      /* font-weight: bold; */
+    }
+}
+
+.product-body{
+  line-height: 30px;
+}
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd ;
+  border-radius: 10px;
+}
+
+.image-container img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.product-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.product-header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.category,
+.price,
+.rating,
+.availability,
+.shipping,
+.warranty,
+.return-policy,
+.sku,
+.weight,
+.dimensions {
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 24px;
+  color: #e67e22;
+}
+
+.price .discount {
+  color: #c0392b;
+  font-size: 16px;
+}
+
+.rating {
+  font-size: 18px;
+  color: #27ae60;
+}
+
+.low-stock {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.details-container {
+  padding: 10px;
+
+}
+
+.details-container p {
+  margin: 5px 0;
+}
+
+.reviews-section {
+  width: 80%;
+  margin: 50px auto 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+
+}
+
+.reviews-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.review h3{
+  margin-bottom: 0;
+}
+.review span{
+  color: rgb(240, 140, 140);
+  font-size: 16px;
+}
+
+.review {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  line-height: 40px;
+}
+
+.review p {
+  margin: 5px 0;
+  border-bottom: 1px solid rgb(210, 206, 206);
+}
+
+
+
+
+
+
+footer {
+    background-color: #f0f0f0;
+    padding: 45px;
+  }
+  
+  .footer ul {
+    list-style: none;
+  }
+  
+  .footer li {
+      margin-bottom: 1rem;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer h3 {
+    color: var(--darker-main);
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+  
+  .footer .d-block {
+    display: block;
+    font-style: italic;
+    color: var(--darker-main);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+  
+  .footer a {
+    color: var(--ligher-main);
+    text-transform: capitalize;
+  }
+  
+  .footer a:hover {
+    color: var(--darker-main);
+  }
+  
+  .footer p {
+    color: var(--ligher-main);
+    margin-bottom: 1rem;
+  }
+  
+  .footer-newsletter .form-group {
+    position: relative;
+  }
+  
+  .footer input {
+    padding: 6px 12px;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--ligher-main);
+    color: var(--darker-main);
+    font-size: 1rem;
+    font-family: "Mukta Mahee", arial, sans-serif;
+    transition: 0.3s all ease;
+  }
+  
+  .footer input:focus {
+    border-bottom-color: var(--darker-main);
+  }
+  
+  .footer input::-webkit-input-placeholder {
+    color: var(--ligher-main);
+    font-style: italic;
+  }
+  
+  .footer-newsletter i {
+    color: var(--darker-main);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .copyright {
+    margin-top: 2rem;
+    margin-inline: 175px;
+    border-top: 1px solid var(--ligher-main);
+    padding-top: 2rem;
+    text-align: center;
+  }
+  
+  .copyright p {
+    color: var(--ligher-main);
+  }
+  
+  .copyright p {
+    color: var(--ligher-main);
+  }
+  
+  .copyright p a,
+  .copyright p a i {
+    color: var(--ligher-main);
+  }
+  
+  .copyright p a i {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .copyright p a:hover,
+  .copyright p a i:hover {
+    color: var(--darker-main);
+    scale: 1.2;
+  }
+
+  a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #ddd;
+}
